@@ -81,7 +81,7 @@ const contentResolvers = {
                           'Content-Type': 'application/txt',
                           'Authorization' : passthroughAccessToken,
                       };
-                      return fetch(contentsUrl, {method: 'GET'}).then(res => res.json()).then(json => {
+                      return fetch(contentsUrl, {method: 'GET', headers: categoryHeaders}).then(res => res.json()).then(json => {
                         console.log('contents JSON: ' +json);
                         return json;
                       });
@@ -99,7 +99,7 @@ const contentResolvers = {
                           'Content-Type': 'application/txt',
                           'Authorization' : passthroughAccessToken,
                       };
-                      return fetch(contentUrlupdated, {method: 'GET'}).then(res => res.json()).then(json => {
+                      return fetch(contentUrlupdated, {method: 'GET', headers: categoryHeaders }).then(res => res.json()).then(json => {
                         console.log('content JSON: ' + json);
                         return json;
                       });

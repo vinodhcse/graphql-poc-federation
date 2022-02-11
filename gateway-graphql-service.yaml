@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: gateway-graphql
-        image: vinodhcse/category-graphql-service:latest
+        image: vinodhcse/gateway-graphql-service:latest
         ports:
         - containerPort: 4002
 
