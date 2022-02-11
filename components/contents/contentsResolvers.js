@@ -58,7 +58,7 @@ const contentResolvers = {
                 let contentUrlupdated = contentUrl+ref.id;
     
                       let categoryHeaders = {
-                          'Content-Type': 'application/txt',
+                          'Content-Type': 'application/json',
                           'Authorization' : passthroughAccessToken,
                       };
                       return fetch(contentUrlupdated, {method: 'GET', headers: categoryHeaders}).then(res => res.json()).then(json => {
