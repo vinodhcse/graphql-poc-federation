@@ -23,6 +23,7 @@ console.log('api_url' + api_url);
 console.log('auth_url' + auth_url);
 console.log('authHeader ' + authHeader);
 console.log('host ' + host);
+console.log('activeCategoryUrl' + activeCategoryUrl);
 
 
 
