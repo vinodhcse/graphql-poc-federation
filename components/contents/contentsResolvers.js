@@ -78,7 +78,7 @@ const contentResolvers = {
               }
               
                       let categoryHeaders = {
-                          'Content-Type': 'application/txt',
+                          'Content-Type': 'application/json',
                           'Authorization' : passthroughAccessToken,
                       };
                       return fetch(contentsUrl, {method: 'GET', headers: categoryHeaders}).then(res => res.json()).then(json => {
@@ -96,7 +96,7 @@ const contentResolvers = {
                 let contentUrlupdated = contentUrl+key;
     
                       let categoryHeaders = {
-                          'Content-Type': 'application/txt',
+                          'Content-Type': 'application/json',
                           'Authorization' : passthroughAccessToken,
                       };
                       return fetch(contentUrlupdated, {method: 'GET', headers: categoryHeaders }).then(res => res.json()).then(json => {

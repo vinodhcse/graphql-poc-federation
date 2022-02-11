@@ -78,14 +78,14 @@ const categoryResolvers = {
         },
         active(category, args, context, info) {
           console.log('inside active category '+ category.id )
-          console.log(context.req.headers.authorization)
+          console.log(context.req.headers.xauthorization)
           let passthroughAccessToken = '';
-          if (context.req && context.req.headers && context.req.headers.authorization) {
-            passthroughAccessToken = context.req.headers.authorization
+          if (context.req && context.req.headers && context.req.headers.xauthorization) {
+            passthroughAccessToken = context.req.headers.xauthorization
           }
           let activeCategoryUrls = activeCategoryUrl + category.id;
                   let categoryHeaders = {
-                      'Content-Type': 'application/txt',
+                      'Content-Type': 'application/json',
                       'Authorization' : passthroughAccessToken,
                   };
                   return fetch(activeCategoryUrls, {method: 'GET', headers: categoryHeaders}).then(res => res.json()).then(json => {
