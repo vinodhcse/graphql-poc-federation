@@ -29,6 +29,7 @@ console.log('api_url' + api_url);
 console.log('auth_url' + auth_url);
 console.log('authHeader ' + authHeader);
 console.log('host ' + host);
+console.log('new host ' + host);
 
 
 
@@ -54,7 +55,7 @@ const contentResolvers = {
               if (args && args.req && args.req.headers && args.req.headers.xauthorization) {
                 passthroughAccessToken = args.req.headers.xauthorization;
               }
-              console.log('authorization token'+passthroughAccessToken);
+              console.log('new authorization token'+passthroughAccessToken);
                 let contentUrlupdated = contentUrl+ref.id;
     
                       let categoryHeaders = {
